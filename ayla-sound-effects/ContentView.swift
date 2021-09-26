@@ -9,8 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Button(action: {
+                print("Button was tapped")
+            }) {
+                Image("Record")
+            }
+
+            Text("Tap to record!")
+                .padding()
+            Button(action: {
+                print("Button was tapped")
+            }) {
+                Image("Stop")
+                    .resizable()
+                    .frame(width: 64, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
+        }
     }
 }
 
